@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="nameText" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="606.0" prefWidth="1044.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cr.ac.una.landuna.View.PlotController">
+   <children>
+      <Label layoutX="18.0" layoutY="14.0" prefHeight="70.0" prefWidth="219.0" text="Parcelas UNA">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Button fx:id="deletePlotsButton" layoutX="589.0" layoutY="448.0" mnemonicParsing="false" onAction="#deletePlots" prefHeight="25.0" prefWidth="181.0" text="Eliminar Parcelas" />
+      <Button fx:id="addPlotsButton" layoutX="37.0" layoutY="423.0" mnemonicParsing="false" onAction="#addPlots" prefHeight="25.0" prefWidth="181.0" text="Agregar Parcelas " />
+      <Button fx:id="updatePlotsButton" layoutX="37.0" layoutY="483.0" mnemonicParsing="false" onAction="#updatePlots" prefHeight="25.0" prefWidth="181.0" text="Actualizar datos de la Parcela" />
+      <Button fx:id="showPlotsButton" layoutX="349.0" layoutY="448.0" mnemonicParsing="false" onAction="#displayAllPlots" prefHeight="25.0" prefWidth="181.0" text="Mostrar Parcelas " />
+      <Button fx:id="searchPlotsButton" layoutX="37.0" layoutY="543.0" mnemonicParsing="false" onAction="#searchPlotByCode" prefHeight="25.0" prefWidth="181.0" text="Buscar Parcelas por Codigo" />
+      <TextField fx:id="codeText" layoutX="143.0" layoutY="95.0" promptText="P-001" />
+      <TextField fx:id="nameText" layoutX="143.0" layoutY="136.0" promptText="San Ramón" />
+      <TextField fx:id="locationText" layoutX="143.0" layoutY="185.0" promptText="Río Claro" />
+      <TextField fx:id="areaText" layoutX="143.0" layoutY="236.0" promptText="1500 m²" />
+      <TextField fx:id="soilTypeText" layoutX="143.0" layoutY="294.0" promptText="Limoso" />
+      <Label layoutX="30.0" layoutY="99.0" text="Código" />
+      <Label layoutX="30.0" layoutY="140.0" text="Nombre de parcela" />
+      <Label layoutX="30.0" layoutY="189.0" text="Ubicación" />
+      <Label layoutX="26.0" layoutY="240.0" text="Área de parcela" />
+      <Label layoutX="32.0" layoutY="298.0" text="Tipo de suelo" />
+      <ComboBox fx:id="soilStateBox" layoutX="30.0" layoutY="366.0" prefHeight="25.0" prefWidth="205.0" promptText="Estado del suelo" />
+      <TableView fx:id="listOfPlots" layoutX="349.0" layoutY="98.0" prefHeight="317.0" prefWidth="674.0">
+        <columns>
+          <TableColumn fx:id="codeColumn" prefWidth="75.0" text="Código" />
+          <TableColumn fx:id="nameColumn" prefWidth="129.0" text="Nombre" />
+            <TableColumn fx:id="ubicationColumn" prefWidth="162.0" text="Ubicación" />
+            <TableColumn fx:id="areaColumn" prefWidth="111.0" text="Área en m²" />
+            <TableColumn fx:id="soilTypeColumn" prefWidth="98.0" text="Tipo de Suelo" />
+            <TableColumn fx:id="soilStateColumn" prefWidth="98.0" text="Estado de Suelo" />
+        </columns>
+      </TableView>
+      <Button fx:id="exitPlotsButton" layoutX="933.0" layoutY="37.0" mnemonicParsing="false" onAction="#exitPlots" prefHeight="25.0" prefWidth="83.0" text="Salir" />
+   </children>
+</AnchorPane>
