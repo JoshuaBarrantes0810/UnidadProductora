@@ -5,7 +5,6 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
@@ -21,6 +20,8 @@ public class AgriculturalManager {
     private Button cropButton;
     @FXML
     private Button cropPButton1;
+    @FXML
+    private Button producerButton;
 
     @FXML
     private void goTAgriculturalWorkController(ActionEvent event) throws IOException {
@@ -57,6 +58,14 @@ public class AgriculturalManager {
     @FXML
     private void goToCropPController(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/cr/ac/una/landuna/View/perennialCrop.fxml"));
+        javafx.scene.Node source = (javafx.scene.Node) event.getSource();
+        Stage screen = (Stage) source.getScene().getWindow();
+        screen.getScene().setRoot(root);
+    }
+
+    @FXML
+    private void goTProducerController(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/cr/ac/una/landuna/View/producer.fxml"));
         javafx.scene.Node source = (javafx.scene.Node) event.getSource();
         Stage screen = (Stage) source.getScene().getWindow();
         screen.getScene().setRoot(root);

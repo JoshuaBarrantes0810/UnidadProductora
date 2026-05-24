@@ -7,7 +7,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="645.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cr.ac.una.landuna.Cotroller.AgriculturalManager">
    <children>
-      <Button fx:id="workButton" layoutX="338.0" layoutY="200.0" mnemonicParsing="false" onAction="#goTAgriculturalWorkController" prefHeight="42.0" prefWidth="106.0" text="Labores">
+      <Button fx:id="workButton" layoutX="247.0" layoutY="200.0" mnemonicParsing="false" onAction="#goTAgriculturalWorkController" prefHeight="42.0" prefWidth="106.0" text="Labores">
          <font>
             <Font size="14.0" />
          </font>
@@ -17,7 +17,7 @@
             <Font size="14.0" />
          </font>
       </Button>
-      <Button fx:id="responsibleButton" layoutX="178.0" layoutY="200.0" mnemonicParsing="false" onAction="#goToResponsibleController" prefHeight="42.0" prefWidth="106.0" text="Responsables">
+      <Button fx:id="responsibleButton" layoutX="85.0" layoutY="200.0" mnemonicParsing="false" onAction="#goToResponsibleController" prefHeight="42.0" prefWidth="106.0" text="Responsables">
          <font>
             <Font size="14.0" />
          </font>
@@ -33,6 +33,11 @@
          </font>
       </Button>
       <Button fx:id="cropPButton1" layoutX="405.0" layoutY="115.0" mnemonicParsing="false" onAction="#goToCropPController" prefHeight="42.0" prefWidth="137.0" text="Cultivos Perennes">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="producerButton" layoutX="405.0" layoutY="200.0" mnemonicParsing="false" onAction="#goTProducerController" prefHeight="42.0" prefWidth="106.0" text="Productores">
          <font>
             <Font size="14.0" />
          </font>

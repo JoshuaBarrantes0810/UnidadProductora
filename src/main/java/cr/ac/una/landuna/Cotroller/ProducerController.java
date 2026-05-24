@@ -48,7 +48,7 @@ public class ProducerController {
         nameProducerColmn.setCellValueFactory(new PropertyValueFactory<>("producerLandName"));
     }
     
-    public void fillColumns(){
+    private void fillColumns(){
         ProducerDAO producerDao = new ProducerDAO();
         List<Producer> producers = producerDao.displayProducer();
         listOfProducers.getItems().setAll(producers);
@@ -128,8 +128,9 @@ public class ProducerController {
             ProducerDAO producerDao = new ProducerDAO();
             Producer producer = new Producer(newCode,newName);
             if(producerDao.updateProducer(producer)){
-            showConfirmation("Éxito","Proceso existoso","El productor se actualizó existosamente.");
-            listOfProducers.getItems().add(producer);
+                showConfirmation("Éxito","Proceso existoso","El productor se actualizó existosamente.");
+                clearFields();
+                fillColumns();
             }
         } catch(Exception e){
             System.out.println("Error: "+e.getMessage());

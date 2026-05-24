@@ -36,8 +36,8 @@ private Connection connection;
       String sql = "UPDATE PRODUCERS SET producer_name = ? WHERE id_producer = ?";
       try{
           PreparedStatement ps = connection.prepareStatement(sql);
-          ps.setString(1, producer.getProducerId());
-          ps.setString(2, producer.getProducerLandName());
+          ps.setString(1, producer.getProducerLandName());
+          ps.setString(2, producer.getProducerId());
           ps.executeUpdate();
           return true;
       }catch(SQLException ex){

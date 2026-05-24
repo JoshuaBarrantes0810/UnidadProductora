@@ -42,13 +42,13 @@ private Connection connection;
        String sql = "UPDATE Rensponsible SET responsible_Name = ?, email = ?, phone_Number = ?, responsible_Type = ?, land_Name_Association = ?, technical_Specialty = ? WHERE responsible_ID = ?";
        try{
         PreparedStatement ps = connection.prepareStatement(sql);
-        ps.setString(1, responsible.getIdentification());
-        ps.setString(2, responsible.getResponsibleName());
-        ps.setString(3, responsible.getEmail());
-        ps.setString(4, responsible.getPhoneNumber());
-        ps.setString(5, responsible.getResponsibleType());
-        ps.setString(6, responsible.getLandNameAsociation().getProducerId());
-        ps.setString(7, responsible.getTechnicalSpeciality().getSpecialty());
+        ps.setString(1, responsible.getResponsibleName());
+        ps.setString(2, responsible.getEmail());
+        ps.setString(3, responsible.getPhoneNumber());
+        ps.setString(4, responsible.getResponsibleType());
+        ps.setString(5, responsible.getLandNameAsociation().getProducerId());
+        ps.setString(6, responsible.getTechnicalSpeciality().getSpecialty());
+        ps.setString(7, responsible.getIdentification());
         ps.executeUpdate();
         return true;
         }catch(SQLException ex){
