@@ -1,26 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="589.0" prefWidth="1161.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cr.ac.una.landuna.Cotroller.ResponsibleController">
    <children>
-      <Label layoutX="148.0" layoutY="49.0" prefHeight="53.0" prefWidth="304.0" text="Responsables UNA">
+      <Label layoutX="14.0" layoutY="26.0" prefHeight="53.0" prefWidth="304.0" text="Responsables UNA">
          <font>
             <Font size="36.0" />
          </font>
       </Label>
-      <Button layoutX="62.0" layoutY="175.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="192.0" text="Actualizar Datos del Responsable" />
-      <Button layoutX="63.0" layoutY="128.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="192.0" text="Agregar Responsable">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Button>
-      <Button layoutX="62.0" layoutY="326.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="192.0" text="Buscar Responsable por Codigo" />
-      <Button layoutX="62.0" layoutY="224.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="192.0" text="Eliminar Responsable" />
-      <Button layoutX="62.0" layoutY="276.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="192.0" text="Mostrar Lista de Responsables" />
+      <Button fx:id="deleteButton" layoutX="606.0" layoutY="410.0" mnemonicParsing="false" onAction="#deleteResponsible" prefHeight="25.0" prefWidth="191.0" text="Eliminar Responsable" />
+      <Button fx:id="findButton" layoutX="36.0" layoutY="472.0" mnemonicParsing="false" onAction="#findResponsible" prefHeight="25.0" prefWidth="191.0" text="Buscar Responsable por ID " />
+      <Button fx:id="updateButton" layoutX="36.0" layoutY="422.0" mnemonicParsing="false" onAction="#updateResponsible" text="Actualizar datos del Responsable" />
+      <Button fx:id="addButton" layoutX="36.0" layoutY="372.0" mnemonicParsing="false" onAction="#addResponsible" prefHeight="25.0" prefWidth="191.0" text="Agregar Responsable" />
+      <Button fx:id="showButton" layoutX="375.0" layoutY="410.0" mnemonicParsing="false" onAction="#showResponsible" prefHeight="25.0" prefWidth="191.0" text="Mostrar Responsables " />
+      <Button fx:id="exitButton" layoutX="1069.0" layoutY="40.0" mnemonicParsing="false" onAction="#exitResponsible" prefHeight="25.0" prefWidth="64.0" text="Salir" />
+      <TableView fx:id="listOfResponsibles" layoutX="375.0" layoutY="107.0" prefHeight="280.0" prefWidth="758.0">
+        <columns>
+          <TableColumn fx:id="IDColumn" prefWidth="116.0" text="ID Responsable" />
+          <TableColumn fx:id="nameColumn" prefWidth="134.0" text="Nombre Responsable" />
+            <TableColumn fx:id="emailColumn" prefWidth="50.0" text="Email" />
+            <TableColumn fx:id="phoneNumberColumn" prefWidth="125.0" text="Numero Telefonico" />
+            <TableColumn fx:id="responsibleColmn" prefWidth="107.0" text="Tipo Responsable" />
+            <TableColumn fx:id="landColumn" minWidth="1.0" prefWidth="95.0" text="Finca Asociada" />
+            <TableColumn fx:id="especialtycolumn" minWidth="1.0" prefWidth="130.0" text="Especialidad Tecnica" />
+        </columns>
+      </TableView>
+      <Label layoutX="46.0" layoutY="131.0" />
+      <Label layoutX="14.0" layoutY="115.0" prefHeight="17.0" prefWidth="134.0" text="ID del reponsable" />
+      <Label layoutX="14.0" layoutY="147.0" text="Nombre del Responsable" />
+      <Label layoutX="14.0" layoutY="179.0" prefHeight="17.0" prefWidth="134.0" text="Email" />
+      <Label layoutX="14.0" layoutY="208.0" prefHeight="17.0" prefWidth="134.0" text="Numero Telefonico" />
+      <Label layoutX="14.0" layoutY="238.0" prefHeight="17.0" prefWidth="134.0" text="Tipo de Responsable" />
+      <Label layoutX="14.0" layoutY="272.0" prefHeight="17.0" prefWidth="134.0" text="Finca Asociada " />
+      <TextField fx:id="nameText" layoutX="197.0" layoutY="143.0" promptText="Joshua Barrantes Granados" />
+      <TextField fx:id="emailText" layoutX="197.0" layoutY="175.0" promptText="joshuabg10@gmail.com" />
+      <TextField fx:id="numberText" layoutX="197.0" layoutY="204.0" promptText="86617371" />
+      <TextField fx:id="typeText" layoutX="197.0" layoutY="234.0" promptText="Supervisor" />
+      <TextField fx:id="landNameText" layoutX="197.0" layoutY="268.0" promptText="Finca km 24" />
+      <TextField fx:id="idText" layoutX="197.0" layoutY="111.0" promptText="1-1930-0043" />
+      <ComboBox fx:id="technicialSpecialityBox" layoutX="36.0" layoutY="311.0" prefHeight="25.0" prefWidth="191.0" promptText="Especialidad Tecnica " />
    </children>
 </AnchorPane>

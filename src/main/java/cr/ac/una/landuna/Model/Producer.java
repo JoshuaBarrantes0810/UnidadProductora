@@ -9,6 +9,10 @@ public class Producer {
         this.producerLandName=producerLandName;
     }
     
+    public Producer(){
+        
+    }
+    
     public void setProducerId(String id){
         this.producerId=id;
     }

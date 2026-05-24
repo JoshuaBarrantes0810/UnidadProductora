@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="672.0" prefWidth="877.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="672.0" prefWidth="877.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cr.ac.una.landuna.Cotroller.ProducerController">
    <children>
       <Label layoutX="20.0" layoutY="43.0" prefHeight="53.0" prefWidth="278.0" text="Productores UNA">
          <font>
@@ -27,8 +27,8 @@
             <Font size="13.0" />
          </font>
       </Label>
-      <TextField layoutX="217.0" layoutY="128.0" prefHeight="25.0" prefWidth="149.0" promptText="FIN-01" />
-      <TextField layoutX="217.0" layoutY="182.0" prefHeight="25.0" prefWidth="149.0" promptText="Finca KM 24" />
+      <TextField fx:id="codeText" layoutX="217.0" layoutY="128.0" prefHeight="25.0" prefWidth="149.0" promptText="FIN-01" />
+      <TextField fx:id="nameText" layoutX="217.0" layoutY="182.0" prefHeight="25.0" prefWidth="149.0" promptText="Finca KM 24" />
       <Button fx:id="deleteProducerButton" layoutX="551.0" layoutY="542.0" mnemonicParsing="false" onAction="#deleteProducer" prefHeight="39.0" prefWidth="162.0" text="Eliminar Fincas Productoras" />
       <Button fx:id="addProducerButton" layoutX="39.0" layoutY="240.0" mnemonicParsing="false" onAction="#addProducer" prefHeight="39.0" prefWidth="162.0" text="Agregar Finca Productora" />
       <Button fx:id="showProducerButton" layoutX="273.0" layoutY="542.0" mnemonicParsing="false" onAction="#ShowProducer" prefHeight="39.0" prefWidth="162.0" text="Mostrar Fincas Productoras" />

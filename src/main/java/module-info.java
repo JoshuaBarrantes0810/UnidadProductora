@@ -4,5 +4,9 @@ module cr.ac.una.landuna {
     requires java.sql;
     requires java.base;
     opens cr.ac.una.landuna to javafx.fxml;
+    opens cr.ac.una.landuna.Cotroller to javafx.fxml;
     exports cr.ac.una.landuna;
+    opens cr.ac.una.landuna.DAO;
+    opens cr.ac.una.landuna.Model;
+    opens cr.ac.una.landuna.Connection;
 }

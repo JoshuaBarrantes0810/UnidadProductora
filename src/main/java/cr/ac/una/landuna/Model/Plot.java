@@ -4,7 +4,7 @@ package cr.ac.una.landuna.Model;
 import java.math.BigDecimal;
 
 public class Plot {
-   private String plotCode;
+    private String plotCode;
     private String plotName;
     private String plotLocation;
     private BigDecimal plotArea;

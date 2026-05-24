@@ -1,1 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="536.0" prefWidth="1182.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cr.ac.una.landuna.Cotroller.PerennialCropController">
+   <children>
+      <Label layoutX="22.0" layoutY="26.0" prefHeight="53.0" prefWidth="371.0" text="Cultivos Anuales UNA">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="29.0" layoutY="102.0" text="Codigo de Cultivo" />
+      <Label layoutX="29.0" layoutY="135.0" text="Nombre del Cultivo" />
+      <Label layoutX="29.0" layoutY="166.0" text="Variedad de Cultivo" />
+      <Label layoutX="29.0" layoutY="199.0" text="Dia de Plantacion" />
+      <Label layoutX="29.0" layoutY="229.0" text="Tipo de Cultivo" />
+      <TextField fx:id="idCode" layoutX="150.0" layoutY="98.0" promptText="C-001" />
+      <TextField fx:id="idCrop" layoutX="150.0" layoutY="131.0" promptText="Arroz" />
+      <TextField fx:id="idVariety" layoutX="150.0" layoutY="162.0" promptText="Legumbres" />
+      <TextField fx:id="idDate" layoutX="150.0" layoutY="195.0" promptText="dd-mm-yyyy" />
+      <TextField fx:id="idType" layoutX="150.0" layoutY="225.0" promptText="Anual" />
+      <TextField fx:id="idDays" layoutX="150.0" layoutY="264.0" promptText="90" />
+      <Label layoutX="30.0" layoutY="268.0" text="Produccion en Dias" />
+      <Button fx:id="addPerennialButton" layoutX="24.0" layoutY="388.0" mnemonicParsing="false" onAction="#addPerennial" text="Agregar Cultivos" />
+      <Button fx:id="updatePerennialButton" layoutX="24.0" layoutY="436.0" mnemonicParsing="false" onAction="#updatePerennial" text="Actualizar Cultivos" />
+      <Button fx:id="exitAnnualButton" layoutX="1107.0" layoutY="40.0" mnemonicParsing="false" onAction="#exitAnnual" prefHeight="25.0" prefWidth="52.0" text="Salir" />
+      <Button fx:id="findPerennialButton" layoutX="22.0" layoutY="481.0" mnemonicParsing="false" onAction="#findPerennial" text="Buscar Cultivos por Codigo" />
+      <Button fx:id="showPerennialButton" layoutX="334.0" layoutY="351.0" mnemonicParsing="false" onAction="#showPerennial" text="Mostrar Cultivos" />
+      <Button fx:id="deletePerennialButton" layoutX="481.0" layoutY="351.0" mnemonicParsing="false" onAction="#deletePerennial" text="Eliminar Cultivos" />
+      <TableView fx:id="annuaCrops" layoutX="313.0" layoutY="108.0" prefHeight="200.0" prefWidth="857.0">
+         <columns>
+            <TableColumn fx:id="cropCode" prefWidth="96.0" text="Codigo Cultivo" />
+            <TableColumn fx:id="cropName" prefWidth="98.0" text="Nombre Cultivo" />
+            <TableColumn fx:id="cropVariety" prefWidth="98.0" text="Variedad Cultivo" />
+            <TableColumn fx:id="plantationDay" minWidth="0.0" prefWidth="92.0" text="Dia Plantacion" />
+            <TableColumn fx:id="cropType" prefWidth="78.0" text="Tipo Cultivo" />
+            <TableColumn fx:id="productionDays" prefWidth="103.0" text="Ciclo de Días" />
+            <TableColumn fx:id="description" prefWidth="291.0" text="Descripcion" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

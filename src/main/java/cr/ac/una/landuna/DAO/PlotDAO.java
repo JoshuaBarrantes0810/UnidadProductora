@@ -19,7 +19,7 @@ private Connection connection;
 
     @Override
     public boolean insertPlot(Plot plot) {
-         String sql = "INSERT INTO PLOTS (code,plotName,plotLocation,area,soil_type,soil_state) VALUES (?,?,?,?,?,?)";
+         String sql = "INSERT INTO PLOT (code,plotName,plotLocation,area,soil_type,soil_state) VALUES (?,?,?,?,?,?)";
         try{
             PreparedStatement ps = connection.prepareStatement(sql);
             ps.setString(1, plot.getPlotCode());
@@ -38,7 +38,7 @@ private Connection connection;
 
     @Override
     public boolean updatePlot(Plot plot) {
-        String sql = "UPDATE PLOTS SET plotName = ?, plotLocation = ?, area = ?, soil_type = ?, soil_state = ? WHERE code = ?";
+        String sql = "UPDATE PLOT SET plotName = ?, plotLocation = ?, area = ?, soil_type = ?, soil_state = ? WHERE code = ?";
         try{
             PreparedStatement ps = connection.prepareStatement(sql);
             ps.setString(1, plot.getPlotName());
@@ -57,7 +57,7 @@ private Connection connection;
 
     @Override
     public boolean deletePlot(Plot plot) {
-    String sql = "DELETE FROM PLOTS WHERE code = ?";
+    String sql = "DELETE FROM PLOT WHERE code = ?";
         try {
             PreparedStatement ps = connection.prepareStatement(sql);
             ps.setString(1, plot.getPlotCode());
@@ -72,7 +72,7 @@ private Connection connection;
     @Override
     public List<Plot> displayPlots() {
        List<Plot> plots = new ArrayList<>();
-        String sql = "SELECT * FROM PLOTS";
+        String sql = "SELECT * FROM PLOT";
         try {
             PreparedStatement ps = connection.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
@@ -89,7 +89,7 @@ private Connection connection;
 
     @Override
     public Plot findPlot(String code) {
-      String sql = "SELECT * FROM PLOTS WHERE code = ?";
+      String sql = "SELECT * FROM PLOT WHERE code = ?";
         try {
             PreparedStatement ps = connection.prepareStatement(sql);
             ps.setString(1, code);

@@ -2,21 +2,43 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="672.0" prefWidth="877.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cr.ac.una.landuna.Cotroller.ProducerController">
    <children>
-      <Label layoutX="161.0" layoutY="51.0" prefHeight="53.0" prefWidth="278.0" text="Productores UNA">
+      <Label layoutX="20.0" layoutY="43.0" prefHeight="53.0" prefWidth="278.0" text="Productores UNA">
          <font>
             <Font size="36.0" />
          </font>
       </Label>
-      <Button layoutX="50.0" layoutY="321.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="176.0" text="Buscar Productor por Codigo" />
-      <Button layoutX="50.0" layoutY="274.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="176.0" text="Mostrar Lista de Productor" />
-      <Button layoutX="50.0" layoutY="225.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="176.0" text="Actualizar datos del Productor" />
-      <Button layoutX="50.0" layoutY="172.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="176.0" text="Eliminar Productor" />
-      <Button layoutX="50.0" layoutY="122.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="176.0" text="Agregar Productor" />
+      <Button fx:id="findProducerButton" layoutX="39.0" layoutY="389.0" mnemonicParsing="false" onAction="#findProducer" prefHeight="39.0" prefWidth="162.0" text="Buscar Finca por Codigo" />
+      <Label layoutX="39.0" layoutY="123.0" />
+      <Label layoutX="15.0" layoutY="128.0" prefHeight="25.0" prefWidth="180.0" text="Codigo del la Finca Productora">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="16.0" layoutY="185.0" text="Nombre de la Finca Productora">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="codeText" layoutX="217.0" layoutY="128.0" prefHeight="25.0" prefWidth="149.0" promptText="FIN-01" />
+      <TextField fx:id="nameText" layoutX="217.0" layoutY="182.0" prefHeight="25.0" prefWidth="149.0" promptText="Finca KM 24" />
+      <Button fx:id="deleteProducerButton" layoutX="551.0" layoutY="542.0" mnemonicParsing="false" onAction="#deleteProducer" prefHeight="39.0" prefWidth="162.0" text="Eliminar Fincas Productoras" />
+      <Button fx:id="addProducerButton" layoutX="39.0" layoutY="240.0" mnemonicParsing="false" onAction="#addProducer" prefHeight="39.0" prefWidth="162.0" text="Agregar Finca Productora" />
+      <Button fx:id="showProducerButton" layoutX="273.0" layoutY="542.0" mnemonicParsing="false" onAction="#ShowProducer" prefHeight="39.0" prefWidth="162.0" text="Mostrar Fincas Productoras" />
+      <Button fx:id="updateProducerButton" layoutX="39.0" layoutY="317.0" mnemonicParsing="false" onAction="#updateProducer" prefHeight="39.0" prefWidth="162.0" text="Actualizar Datos de la Finca" />
+      <Button fx:id="exitButton" layoutX="679.0" layoutY="57.0" mnemonicParsing="false" onAction="#exitProducer" prefHeight="25.0" prefWidth="67.0" text="Salir" />
+      <TableView fx:id="listOfProducers" layoutX="273.0" layoutY="237.0" prefHeight="285.0" prefWidth="440.0">
+        <columns>
+          <TableColumn fx:id="codeProducerColumn" prefWidth="143.0" text="Código de finca" />
+          <TableColumn fx:id="nameProducerColmn" prefWidth="296.0" text="Nombre de finca" />
+        </columns>
+      </TableView>
    </children>
 </AnchorPane>

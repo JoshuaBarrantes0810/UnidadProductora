@@ -5,29 +5,34 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cr.ac.una.landuna.View.AgriculturalManagerController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="645.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cr.ac.una.landuna.Cotroller.AgriculturalManager">
    <children>
-      <Button fx:id="workButton" layoutX="61.0" layoutY="263.0" mnemonicParsing="false" onAction="#goTAgriculturalWorkController" prefHeight="42.0" prefWidth="106.0" text="Labores">
+      <Button fx:id="workButton" layoutX="338.0" layoutY="200.0" mnemonicParsing="false" onAction="#goTAgriculturalWorkController" prefHeight="42.0" prefWidth="106.0" text="Labores">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Button fx:id="plotButton" layoutX="61.0" layoutY="115.0" mnemonicParsing="false" onAction="#goToPlotController" prefHeight="42.0" prefWidth="106.0" text="Parcelas">
+      <Button fx:id="plotButton" layoutX="85.0" layoutY="115.0" mnemonicParsing="false" onAction="#goToPlotController" prefHeight="42.0" prefWidth="106.0" text="Parcelas">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Button fx:id="responsibleButton" layoutX="61.0" layoutY="213.0" mnemonicParsing="false" onAction="#goToResponsibleController" prefHeight="42.0" prefWidth="106.0" text="Responsables">
+      <Button fx:id="responsibleButton" layoutX="178.0" layoutY="200.0" mnemonicParsing="false" onAction="#goToResponsibleController" prefHeight="42.0" prefWidth="106.0" text="Responsables">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Label layoutX="106.0" layoutY="30.0" prefHeight="53.0" prefWidth="388.0" text="Unidad Productora UNA" textAlignment="CENTER">
+      <Label layoutX="28.0" layoutY="23.0" prefHeight="53.0" prefWidth="388.0" text="Unidad Productora UNA" textAlignment="CENTER">
          <font>
             <Font size="36.0" />
          </font>
       </Label>
-      <Button fx:id="cropButton" layoutX="61.0" layoutY="164.0" mnemonicParsing="false" onAction="#goToCropController" prefHeight="42.0" prefWidth="106.0" text="Cultivos">
+      <Button fx:id="cropButton" layoutX="231.0" layoutY="115.0" mnemonicParsing="false" onAction="#goToCropController" prefHeight="42.0" prefWidth="137.0" text="Cultivos Anuales">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="cropPButton1" layoutX="405.0" layoutY="115.0" mnemonicParsing="false" onAction="#goToCropPController" prefHeight="42.0" prefWidth="137.0" text="Cultivos Perennes">
          <font>
             <Font size="14.0" />
          </font>
